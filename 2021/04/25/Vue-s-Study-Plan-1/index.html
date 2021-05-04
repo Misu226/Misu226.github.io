@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Vue的学习计划(1) | Misu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="建议下载Xmind6 目录1.认识和安装Vue2.Vue基础语法3.组件化开发4.Vue CLi详解（基于webpack脚手架）5.Vue-router（前端路由）6.Vuex详解7.网络封装8.项目实战（示例为电商项目）9.项目部署10.Vuejs原理相关 认识和安装VueVue很重要，读音和View一样Vue是一个渐进式的框架Vue全家桶指的是：Core+Vue-router+Vuex Vue">
+  <meta name="description" content="建议下载Xmind6 目录1.认识和安装Vue2.Vue基础语法3.组件化开发4.Vue CLi详解（基于webpack脚手架）5.Vue-router（前端路由）6.Vuex详解7.网络封装8.项目实战（示例为电商项目）9.项目部署10.Vuejs原理相关">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue的学习计划(1)">
 <meta property="og:url" content="http://example.com/2021/04/25/Vue-s-Study-Plan-1/index.html">
 <meta property="og:site_name" content="Misu的博客">
-<meta property="og:description" content="建议下载Xmind6 目录1.认识和安装Vue2.Vue基础语法3.组件化开发4.Vue CLi详解（基于webpack脚手架）5.Vue-router（前端路由）6.Vuex详解7.网络封装8.项目实战（示例为电商项目）9.项目部署10.Vuejs原理相关 认识和安装VueVue很重要，读音和View一样Vue是一个渐进式的框架Vue全家桶指的是：Core+Vue-router+Vuex Vue">
+<meta property="og:description" content="建议下载Xmind6 目录1.认识和安装Vue2.Vue基础语法3.组件化开发4.Vue CLi详解（基于webpack脚手架）5.Vue-router（前端路由）6.Vuex详解7.网络封装8.项目实战（示例为电商项目）9.项目部署10.Vuejs原理相关">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-25T15:02:36.000Z">
-<meta property="article:modified_time" content="2021-04-27T13:00:07.072Z">
+<meta property="article:modified_time" content="2021-04-27T14:32:00.728Z">
 <meta property="article:author" content="Misu226">
 <meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
@@ -167,6 +167,8 @@
       
         <p>建议下载Xmind6</p>
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>1.认识和安装Vue<br>2.Vue基础语法<br>3.组件化开发<br>4.Vue CLi详解（基于webpack脚手架）<br>5.Vue-router（前端路由）<br>6.Vuex详解<br>7.网络封装<br>8.项目实战（示例为电商项目）<br>9.项目部署<br>10.Vuejs原理相关</p>
+<span id="more"></span>
+
 <h2 id="认识和安装Vue"><a href="#认识和安装Vue" class="headerlink" title="认识和安装Vue"></a>认识和安装Vue</h2><p>Vue很重要，读音和View一样<br>Vue是一个渐进式的框架<br>Vue全家桶指的是：Core+Vue-router+Vuex</p>
 <p>Vue有很多特点和Web开发中常见的高级功能<br>1.解耦视图和数据<br>2.可复用的组件<br>3.前端路由技术<br>4.状态管理<br>5.虚拟DOM</p>
 <p>学习Vuejs的前提<br>一定的HTML，CSS，Javascript基础</p>
@@ -175,7 +177,7 @@
 <p>方法3：NPM安装</p>
 <p>建议下载VScode（不是VS）</p>
 <h2 id="HelloVue"><a href="#HelloVue" class="headerlink" title="HelloVue!"></a>HelloVue!</h2><p>控制台是console<br>在ES6中 let定义变量，const定义常量</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">$&lt;body&gt;</span><br><span class="line">		&lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">			&#123;&#123;message&#125;&#125;</span><br><span class="line">			&lt;h1&gt;&#123;&#123;name&#125;&#125;&lt;/h1&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;script src=<span class="string">&quot;../js/vue.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			//<span class="built_in">let</span>(变量)/const(常量)</span><br><span class="line">			//编程范式：声明式编程</span><br><span class="line">			const app= new Vue(&#123;</span><br><span class="line">				el:<span class="string">&#x27;#app&#x27;</span>,//用于挂载要管理的元素</span><br><span class="line">				data:&#123;//定义数据</span><br><span class="line">					message:<span class="string">&#x27;Hello Vue!&#x27;</span>,</span><br><span class="line">					name:<span class="string">&#x27;KKKKKK&#x27;</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;)</span><br><span class="line">			//元素js的做法（编程范式：命令式编程）</span><br><span class="line">			//1.创建div元素，设置id属性</span><br><span class="line">			//2.定义一个变量叫message</span><br><span class="line">			//3.将message变量放在前面的div元素中显示</span><br><span class="line">			//4.修改message的数据：天气不错</span><br><span class="line">			//5.将修改后的数据再次替换到div元素</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">$   &lt;body&gt;</span><br><span class="line">		&lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">			&#123;&#123;message&#125;&#125;</span><br><span class="line">			&lt;h1&gt;&#123;&#123;name&#125;&#125;&lt;/h1&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;script src=<span class="string">&quot;../js/vue.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			//<span class="built_in">let</span>(变量)/const(常量)</span><br><span class="line">			//编程范式：声明式编程</span><br><span class="line">			const app= new Vue(&#123;</span><br><span class="line">				el:<span class="string">&#x27;#app&#x27;</span>,//用于挂载要管理的元素</span><br><span class="line">				data:&#123;//定义数据</span><br><span class="line">					message:<span class="string">&#x27;Hello Vue!&#x27;</span>,</span><br><span class="line">					name:<span class="string">&#x27;KKKKKK&#x27;</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;)</span><br><span class="line">			//元素js的做法（编程范式：命令式编程）</span><br><span class="line">			//1.创建div元素，设置id属性</span><br><span class="line">			//2.定义一个变量叫message</span><br><span class="line">			//3.将message变量放在前面的div元素中显示</span><br><span class="line">			//4.修改message的数据：天气不错</span><br><span class="line">			//5.将修改后的数据再次替换到div元素</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -267,7 +269,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Vue&#39;s Study Plan(2)
+          Vue的学习计划(2)
         
       </div>
     </a>
@@ -401,6 +403,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
               </li>
              
               <li class="article-tag-list-item">
